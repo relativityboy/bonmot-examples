@@ -9,6 +9,7 @@ Don't worry. It's easy.
 ##Install:
 To take advantage of these tutorials you'll need Node.js on your computer, 
 and to have port 3000 available. To use, do the following:
+
 1. Clone/download this project
 1. Open a shell and cd into the project root directory 
 1. Run the command *npm install*
@@ -18,6 +19,7 @@ and to have port 3000 available. To use, do the following:
 ##Examples: 
 
 *items with * have not yet been written*
+
 1. Two way data binding basics
 2. Control binding basics
 3. Custom Data Binding
