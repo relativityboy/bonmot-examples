@@ -7,7 +7,8 @@
 </head>
 <body>
 <div class="container-fluid">
-  <h1>Example 3. Seeing things twice. </h1>
+  <h1>Example 3. Seeing things twice, the nice way.</h1>
+  <h3>Keeping display logic out of the Model with templates and the 'bindings' attribute.</h3>
   <p>
     If you've looked at the code in our previous example, you've seen that the model has a function <b>setDisplayName</b>
     on it. In fact, all of the initialize code in the model is about creating and maintaining the displayName attribute.
@@ -17,12 +18,12 @@
     <span title="Unless your model is a 'View Model' (a model designed specifically to drive one or more kinds of views) best to keep display specific data out of them.">
       but while there are times this can be a good thing</span>, pure data models are best kept lite.
     To do that, we move the displayName driver out of the model an into the view by adding a native stickit binding.
-    All of stickit's abilities are available to you *if* you need them.
+    All of stickit's abilities are available to you if you need them.
     <a href="http://nytimes.github.io/backbone.stickit/">Just follow the stickit documentation</a>. BonMot
-    will respect your choices.
+    always defers to native stickit bindings; it will respect your choices.
   </p>
-  <p>If you look at the code, you'll see we've cut the total number of lines by four, and improved both readability and
-    comprehensibility.
+  <p><strong>In the code:</strong> You'll see we've cut the total number of lines by four, and improved both readability and
+    comprehensibility.(slashes added to give you a visual hint that this is different from our last example)
   </p>
   <div class="panel panel-default">
     <div id="example" class="panel-body"/>

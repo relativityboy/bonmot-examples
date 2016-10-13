@@ -22,6 +22,7 @@ app.use('/libs/dw-backbone/', express.static(__dirname + '/node_modules/dw-backb
 app.use('/libs/stickit/', express.static(__dirname + '/node_modules/backbone.stickit/'));
 app.use('/libs/bootstrap/', express.static(__dirname + '/node_modules/bootstrap/dist/'));
 app.use('/libs/bonmot/', express.static(__dirname + '/node_modules/bonmot/dist/'));
+app.use('/libs/require-css/', express.static(__dirname + '/node_modules/require-css/'));
 app.use('/', express.static(__dirname + '/public/'));
 /*app.get('/:name', function (req, res, next) {
   console.log(req.params.name);

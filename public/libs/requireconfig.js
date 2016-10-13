@@ -31,5 +31,12 @@ require.config({
     templateExtension: ".hbs",
     //compilerPath: "/static/common/handlebars/handlebars-4.0.5",
     compilerPath: "handlebars",
+  },
+  //I'm not a fan of the way this lib is packaged.
+  map:{
+    '*': {
+      'css': '/libs/require-css/css.js'
+    }
   }
+
 });

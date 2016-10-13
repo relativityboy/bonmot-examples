@@ -23,7 +23,8 @@ and to have port 3000 available. To use, do the following:
 1. Two way data binding basics
 2. Control binding basics
 3. Custom Data Binding
-3. Adding a child view*
+4. Modularizing CSS with the 'unique' attribute
+8. Adding a child view*
 4. Child view with same attribute name.*
 5. Multiple child views.*
 6. Deletable child views*
