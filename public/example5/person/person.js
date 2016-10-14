@@ -12,6 +12,16 @@ define([
     var _export = {};
 
     /**
+     * A utility class to make our example a little simpler. Our newAddress function checks to see if the item is
+     * already an Address.Model before deciding if it's going to create a new one.
+     *
+     * @param address
+     */
+    var newAddress = function(address) {
+      return (address.constructor === Address.Model)? address : new Address.Model(address)
+    };
+
+    /**
      * Person.Model -
      * We're using DWBackbone's _set.<attrName> schema to instantiate a new Address.Model
      * anytime Model.set('address', {}) is called.
@@ -21,9 +31,7 @@ define([
      */
     _export.Model = BonMot.Model.extend({
       _set:{
-        address:function(addressJSON) {
-          return new Address.Model(addressJSON)
-        }
+        address:newAddress
       }
     });
 

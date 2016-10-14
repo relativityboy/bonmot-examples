@@ -23,9 +23,10 @@ and to have port 3000 available. To use, do the following:
 1. Two way data binding basics
 2. Control binding basics
 3. Custom Data Binding
-4. Modularizing CSS with the 'unique' attribute
-8. Adding a child view*
-4. Child view with same attribute name.*
+4. Modularized CSS with *.unique*
+5. Automagic Child-Views. Nested data. The basics.
+6. Child-Views - Changing Models
+4. Handling nested properties with the same name.*
 5. Multiple child views.*
 6. Deletable child views*
 7. Re-usable views (setModel)*
