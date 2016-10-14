@@ -18,10 +18,3 @@ define(['person/person.js'], function(Person) {
     }
   }
 });
-
-addy2 = {
-  street:"2120 Fulton St",
-  city:"Brewtown",
-  state:"Queens",
-  country:"NZ"
-}

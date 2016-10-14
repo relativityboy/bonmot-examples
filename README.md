@@ -1,6 +1,6 @@
 #BonMot-Examples - Tutorials by Example
 
-A set of examples for using BonMot. 
+A set of examples for using [BonMot](https://www.npmjs.com/package/bonmot). 
 The examples range from simple to complex, and eventually to the very complex.
  
 While BonMot does not require Node, install and run the examples, you will. 
@@ -26,7 +26,7 @@ and to have port 3000 available. To use, do the following:
 4. Modularized CSS with *.unique*
 5. Automagic Child-Views. Nested data. The basics.
 6. Child-Views - Changing Models
-4. Handling nested properties with the same name.*
+7. Handling nested properties with the same name.
 5. Multiple child views.*
 6. Deletable child views*
 7. Re-usable views (setModel)*
