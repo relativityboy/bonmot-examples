@@ -10,6 +10,7 @@ Don't worry. It's easy.
 To take advantage of these tutorials you'll need Node.js on your computer, 
 and to have port 3000 available. To use, do the following:
 
+1. Install Node 6.2.1 or greater, with NPM 3.9.3 or greater
 1. Clone/download this project
 1. Open a shell and cd into the project root directory 
 1. Run the command *npm install*
@@ -21,16 +22,16 @@ and to have port 3000 available. To use, do the following:
 *items with * have not yet been written*
 
 1. Two way data binding basics
-2. Control binding basics
-3. Custom Data Binding
-4. Modularized CSS with *.unique*
-5. Automagic Child-Views. Nested data. The basics.
-6. Child-Views - Changing Models
-7. Handling nested properties with the same name.
-8. Child-Views from Collections.*
-9. Deletable child views*
-10. Advanced controls - different events (mouse over, etc)*
-11. Bon-mot models*
+1. Control binding basics
+1. Custom Data Binding
+1. Modularized CSS with *.unique*
+1. Automagic Child-Views. Nested data. The basics.
+1. Child-Views - Changing Models
+1. Handling nested properties with the same name.
+1. Child-Views from Collections.*
+1. Deletable child views*
+1. Advanced controls - different events (mouse over, etc)*
+1. Bon-mot models*
 
 
 ##Ask Questions!
