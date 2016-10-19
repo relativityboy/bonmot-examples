@@ -27,8 +27,15 @@ and to have port 3000 available. To use, do the following:
 5. Automagic Child-Views. Nested data. The basics.
 6. Child-Views - Changing Models
 7. Handling nested properties with the same name.
-5. Multiple child views.*
-6. Deletable child views*
-7. Re-usable views (setModel)*
-8. Advanced controls - different events (mouse over, etc)*
-9. Bon-mot models*
+8. Child-Views from Collections.*
+9. Deletable child views*
+10. Advanced controls - different events (mouse over, etc)*
+11. Bon-mot models*
+
+
+##Ask Questions!
+BonMot may be born of much experience, but it's also very new!
+
+We're very interested in your feedback. If you want to know how
+to do something in BonMot, chances are other people do, too. We may be able to write up 
+an example for you and everyone else. Don't hesitate to ask.
