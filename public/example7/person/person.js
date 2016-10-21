@@ -15,41 +15,20 @@ define([
   ) {
     var _export = {};
 
-
-    _export.personJSON = [
-      {
-        name:"Happy Golucky",
-        address:{
-          name:"Home",
-          street:"300,000 Park Ave",
-          city:"New York",
-          state:"NY",
-          country:"USA"
-        }
-      },
-      {
-        name:"Sad Monkey",
-        address:{
-          name:"Home",
-          street:"300,000 Park Ave",
-          city:"New York",
-          state:"NY",
-          country:"USA"
-        }
-      }
-    ];
-
-    var newAddress = function(address) {
-      return (address.constructor === Address.Model)? address : new Address.Model(address)
-    };
-
     _export.Model = BonMot.Model.extend({
       _set:{
-        address:newAddress
+        address:function(address) {
+          return (address.constructor === Address.Model)? address : new Address.Model(address)
+        }
       }
     });
 
+    _export.Collection = BonMot.Collection.extend({
+      model:_export.Model
+    });
+
     _export.View = BonMot.View.extend({
+      Model:_export.Model,
       hbs:tplPerson,
       unique:'person-app',
       uiBindings:[
@@ -59,33 +38,13 @@ define([
           observe:'name'
         }
       ],
-
       atrViews:{
         address:Address.View
       },
-      /**
-       * We've added 'this.stickit()' at the end of initialize()
-       * to make the example a little easier to play with.
-       */
-      initialize:function() {
-        this.exampleAddresses = [
-          this.model.get('address'),
-          new Address.Model({
-            name:"Other Home",
-            street:"5939 Portland Ave",
-            city:"Minnesnapolis",
-            state:"MN",
-            country:"USA"
-          }),
-          new Address.Model({
-            name:"FunHouse",
-            street:"2120 Fulton St",
-            city:"Brewtown",
-            state:"Queens",
-            country:"NZ"
-          }),
-          new Address.Model({}),
-        ];
+      initialize:function(options) {
+        this.persons = options.persons
+        this.exampleAddresses = new Address.Collection(options.addressData);
+        this.persons.setOnAll('address', this.exampleAddresses.at(0))
       },
 
       /**
@@ -94,10 +53,10 @@ define([
        * the Address.Model at exampleAddress[data-index] on the Person.Model (this.model)
        */
       ctrlSetAddress:function(evt) {
-        this.model.set('address', this.exampleAddresses[$(evt.target).data('index')]);
+        this.model.set('address', this.exampleAddresses.at($(evt.target).data('index')));
       },
       ctrlSetPerson:function(evt) {
-        this.setModel(this.options.persons[$(evt.target).data('index')]);
+        this.setModel(this.persons.at($(evt.target).data('index')));
       }
     });
 

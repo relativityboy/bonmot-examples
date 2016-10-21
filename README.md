@@ -2,8 +2,11 @@
 
 A set of examples for using [BonMot](https://www.npmjs.com/package/bonmot). 
 The examples range from simple to complex, and eventually to the very complex.
+
+Try to go through them in-order. There are subtleties in each example that can
+make your Javascript experience much more fun as you pick-up on them.
  
-While BonMot does not require Node, install and run the examples, you will. 
+While BonMot does not require Node, to install and run the examples, you will. 
 Don't worry. It's easy.
 
 ##Install:
@@ -28,8 +31,8 @@ and to have port 3000 available. To use, do the following:
 1. Automagic Child-Views. Nested data. The basics.
 1. Child-Views - Changing Models
 1. Handling nested properties with the same name.
-1. Child-Views from Collections.*
-1. Deletable child views*
+1. Child-Views from Collections. (2 examples)
+1. Creating, Deleting & Reordering Child-Views automatically*
 1. Advanced controls - different events (mouse over, etc)*
 1. Bon-mot models*
 

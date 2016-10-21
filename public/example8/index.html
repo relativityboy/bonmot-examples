@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example 8 - BonMot</title>
+  <link href="/libs/bootstrap/css/bootstrap.css" media="screen" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="container-fluid">
+  <h1>Example 8. Collections of Models with Child-Views.</h1>
+  <h3>Auto-magic lists of Child Views</h3>
+  <p>Some lists are simple, static, and are well represented by an hbs <strong>#each</strong> statement.</p>
+  <p>Others lists are much more complex. Collections of models with rich-data, interactivity; lists that might change
+  order or membership are what we're addressing in this example.</p>
+  <p>
+    This example jumps up quite a bit in complexity as we bring things together. We have a few different views that
+    interact in novel ways:
+    <ul>
+      <li><strong>Person.View</strong> This is our 'root' view. It contains all other views.</li>
+      <li><strong>Address.DetailView</strong> This view allows you to see and edit the details of an address.</li>
+      <li><strong>Address.ItemView</strong> This view appears as many times as there are addresses for the person.</li>
+    </ul>
+  </p>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">Example</div>
+    <div id="example" class="panel-body">Hi there. Here's a little static text for you.</div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/libs/requirejs/require.js"></script>
+<script type="text/javascript" src="/libs/requireconfig.js"></script>
+<script>
+  require(['app.js'], function(App) {
+    App.start();
+  })
+</script>
+</body>
+</html>

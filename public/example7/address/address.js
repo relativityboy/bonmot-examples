@@ -11,9 +11,12 @@ define([
 
     _export.Model = BonMot.Model.extend({});
 
-    _export.Collection = BonMot.Collection.extend({});
+    _export.Collection = BonMot.Collection.extend({
+      model:_export.Model
+    });
 
     _export.View = BonMot.View.extend({
+      Model:_export.Model,
       hbs:tplAddress,
       unique:'address-app',
       uiBindings:['name', 'street','city','state','country'],

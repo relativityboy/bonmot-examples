@@ -23,12 +23,18 @@ define([
 
     _export.View = BonMot.View.extend({
       /**
-       * this handlebars template will be automatically rendered when the view is instantiated
+       * This model assignment allows BonMot to do all kinds of introspection based on the features & standards
+       * established in DWBackbone
+       */
+      Model:_export.Model,
+
+      /**
+       * This handlebars template will be automatically rendered when the view is instantiated
        */
       hbs:tplPerson,
 
       /**
-       * these model attributes will be respectively bound to .w-atr-firstName , .w-atr-lastName , .w-atr-displayName
+       * These model attributes will be respectively bound to .w-atr-firstName , .w-atr-lastName , .w-atr-displayName
        */
       uiBindings:['firstName','lastName', 'displayName'],
     });

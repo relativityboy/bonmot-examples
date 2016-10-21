@@ -26,7 +26,7 @@ define([
     /**
      * Person.Model -
      * We're using DWBackbone's _set.<attrName> schema to instantiate new Address.Model
-     * for address when
+     * for address when a plain Object is passed in.
      */
     _export.Model = BonMot.Model.extend({
       _set:{
@@ -36,6 +36,7 @@ define([
 
 
     _export.View = BonMot.View.extend({
+      Model:_export.Model,
       hbs:tplPerson,
       unique:'person-app',
       uiBindings:['firstName','lastName'],
@@ -54,23 +55,9 @@ define([
        * if these were just JSON, a new model would be created every
        * time you clicked a button, and any previous edits would be lost.
        */
-      initialize:function() {
-        this.exampleAddresses = [
-          this.model.get('address'),
-          new Address.Model({
-            street:"5939 Portland Ave",
-            city:"Minnesnapolis",
-            state:"MN",
-            country:"USA"
-          }),
-          new Address.Model({
-            street:"2120 Fulton St",
-            city:"Brewtown",
-            state:"Queens",
-            country:"NZ"
-          }),
-          new Address.Model({}),
-        ]
+      initialize:function(options) {
+        this.exampleAddresses = new Address.Collection(options.addressData);
+        this.model.set('address', this.exampleAddresses.at(0));
       },
 
       /**
@@ -79,7 +66,7 @@ define([
        * the Address.Model at exampleAddress[data-index] on the Person.Model (this.model)
        */
       ctrlSetAddress:function(evt) {
-        this.model.set('address', this.exampleAddresses[$(evt.target).data('index')]);
+        this.model.set('address', this.exampleAddresses.at($(evt.target).data('index')));
       }
     });
 

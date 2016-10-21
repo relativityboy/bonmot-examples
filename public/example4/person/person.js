@@ -15,6 +15,7 @@ define([
     _export.Model = BonMot.Model.extend({});
 
     _export.View = BonMot.View.extend({
+      Model:_export.Model,
       hbs:tplPerson,
       unique:'person-app',
       uiBindings:['firstName','lastName'],
