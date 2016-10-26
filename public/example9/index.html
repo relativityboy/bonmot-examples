@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example 9 - BonMot</title>
+  <link href="/libs/bootstrap/css/bootstrap.css" media="screen" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="container-fluid">
+  <h1>Example 9 Collections of Models with Child-Views.</h1>
+  <h3>Sorting, Adding, and Removing items from lists.</h3>
+  <p>In this example we move from a simple list to a table that sorts when you click a column header. See
+    <strong>Person.View.ctrlSortBy</strong>. Clicking on a row in the table will set that model on the Address Detail view.
+  </p>
+  <p>Also we have <strong>Person.View.ctrlNewAddress</strong> and <strong>Person.View.ctrlDeleteAddress</strong> for
+    creating and deleting models.
+  </p>
+  <p>
+    <i><b>*BonMot does not yet 'clear' the w-atr-* fields when a model is unset and without a model to replace it.
+      For this example, when you hit delete an address model, the address ItemView will disappear from the list on the
+      left, but the input fields still display the deleted model's information.<br>
+      Clearning this up (no pun intended) is the next feature on the docket. This notice will disappear when that's been implemented.</b><br>
+      Meanwhile, the terrible hack of setting an empty model on the view easily cures the symptoms.</i>
+  </p>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">Example</div>
+    <div id="example" class="panel-body">Hi there. Here's a little static text for you.</div>
+  </div>
+</div>
+
+<script type="text/javascript" src="/libs/requirejs/require.js"></script>
+<script type="text/javascript" src="/libs/requireconfig.js"></script>
+<script>
+  require(['app.js'], function(App) {
+    App.start();
+  })
+</script>
+</body>
+</html>
