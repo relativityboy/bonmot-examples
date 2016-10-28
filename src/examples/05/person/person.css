@@ -1,0 +1,7 @@
+.person-app div.title-row {
+    color:blue;
+}
+
+.person-app div.title-row .special-color {
+    color:orange;
+}

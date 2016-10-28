@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example 2 - BonMot</title>
+  <link href="/libs/bootstrap/css/bootstrap.css" media="screen" rel="stylesheet" type="text/css"/>
+  <link href="/css/style.css" media="screen" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+  <div class="container-fluid">
+    <!--The second example adds a control binding to the first.-->
+  <h1>Example 2.  Buttons are easy</h1>
+  <h3>Controls are bound to UI elements via clear, concise, names.</h3>
+  <p>We've added a button that shows an hides the input fields. Wiring functionality was as easy as adding the class
+    <strong>w-ctrl-toggleEdit</strong> to the button and naming the show/hide function <strong>ctrlToggleEdit</strong>.
+    BonMot figures out the relationship and even makes the button element available via <strong>.$ctrl.toggleEdit</strong> off the view
+    instance.
+  </p>
+  <p>As in Example 1 If you edit the input fields, you'll see the large font name update dynamically.</p>
+
+    <div class="row">
+      <div class="col-xs-12 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">Example</div>
+          <div  id="example" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-lg-6">
+        <div id="modelJSON" class="panel panel-default json">
+          <div class="panel-heading">Person Model State. </div>
+          <div class="w-ctrl-refreshJSON panel-body" title="Click to refresh sub-models"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="/libs/requirejs/require.js"></script>
+  <script type="text/javascript" src="/libs/requireconfig.js"></script>
+  <script>
+    require(['app.js'], function(App) {
+      App.start();
+    })
+  </script>
+</body>
+</html>

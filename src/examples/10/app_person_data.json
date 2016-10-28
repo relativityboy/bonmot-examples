@@ -1,0 +1,27 @@
+{
+  "firstName": "Jennifer",
+  "lastName": "Lawerence",
+  "addressList": [
+    {
+      "name": "Home",
+      "street": "300,000 Park Ave",
+      "city": "Angel Spiffen",
+      "state": "NY",
+      "country": "USA"
+    },
+    {
+      "name": "Other Home",
+      "street": "1939 Portland Ave",
+      "city": "Minnesnapolis",
+      "state": "MN",
+      "country": "USA"
+    },
+    {
+      "name": "FunHouse",
+      "street": "2120 Fulton St",
+      "city": "Brewtown",
+      "state": "Queens",
+      "country": "NZ"
+    }
+  ]
+}

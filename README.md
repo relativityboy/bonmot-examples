@@ -31,11 +31,11 @@ and to have port 3000 available. To use, do the following:
 1. Automagic Child-Views. Nested data. The basics.
 1. Child-Views - Changing Models
 1. Handling nested properties with the same name.
-1. Child-Views from Collections. (2 examples)
+1. Child-Views from Collections. (ctrl binding v1)
+1. Child-Views from Collections. (ctrl binding v2)
 1. Creating, Deleting & Reordering Child-Views automatically
 1. Advanced controls - different events (mouse over, etc)*
-1. Bon-mot models*
-
+1. *with more to come....*
 
 ##Ask Questions!
 BonMot may be born of much experience, but it's also very new!

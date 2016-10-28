@@ -1,0 +1,27 @@
+<!--Child-Views - Changing Models.-->
+  <h1>{{example_number}} Switching Models in Child-Views</h1>
+  <h3>Change a Child-Model and watch the Child-View update.</h3>
+  <p>This example is a little more interesting. Our example code has a list of four
+    <strong>Address.Models</strong>, each with a corresponding button. Clicking
+    on the button will set the corresponding Address.Model on the Person.Model.</p>
+  <p>Click the buttons to switch addresses. Because the address models are persistent
+    and edits you make to an address will be preserved.</p>
+  <p><strong>In the code:</strong>
+    <ol>
+      <li>There are no changes to Address files</li>
+      <li><strong>Person.View</strong> is the only JS that's changed at all. A list of example Address.Models
+        <i>exampleAddresses</i> has been added,
+      and a controller <i>ctrlSetAddress</i> to handle switching</li>
+      <li><strong>person.hbs</strong> has a static list of buttons for switching addresses.</li>
+    </ol>
+  </p>
+  <p>
+    <strong>In the console:</strong>
+    <ol>
+      <li>person.$ctrl.setAddress</li>
+      <li>person.exampleAddresses</li>
+      <li>person.ctrlSetAddress</li>
+      <li>person.hbs()</li>
+      <li>person.model.toJSON()</li>
+    </ol>
+  </p>

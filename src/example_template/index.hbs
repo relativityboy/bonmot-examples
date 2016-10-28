@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example {{example_number}} - BonMot</title>
+  <link href="/libs/bootstrap/css/bootstrap.css" media="screen" rel="stylesheet" type="text/css"/>
+  <link href="/css/style.css" media="screen" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+  <div class="container-fluid">
+    {{{index_content}}}
+    <div class="row">
+      <div class="col-xs-12 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">Example</div>
+          <div  id="example" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-lg-6">
+        <div id="modelJSON" class="panel panel-default json">
+          <div class="panel-heading">Person Model State. </div>
+          <div class="w-ctrl-refreshJSON panel-body" title="Click to refresh sub-models"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="/libs/requirejs/require.js"></script>
+  <script type="text/javascript" src="/libs/requireconfig.js"></script>
+  <script>
+    require(['app.js'], function(App) {
+      App.start();
+    })
+  </script>
+</body>
+</html>

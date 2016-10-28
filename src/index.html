@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>BonMot Examples</title>
+    <link href="/libs/bootstrap/css/bootstrap.css" media="screen" rel="stylesheet" type="text/css"/>
+  </head>
+  <body class="container">
+  <h1>BonMot Examples</h1>
+  <p>
+    With the exception of bootstrap, the examples have been kept as simple as possible for clarity and understanding.
+  </p>
+  <p>
+    To get the most out of these examples, you'll want to follow them in-order, and to have the project open in your editor of choice. All of the code
+    specific to the example lives in that example's directory. For the first example, it lives in <i>public/example1</i>.
+  </p>
+  <ol>
+    {{#each examples}}
+    <li><a href="examples/{{dirname}}/index.html">{{{menuText}}}</a></li>
+    {{/each}}
+  </ol>
+  </body>
+</html>

@@ -1,18 +1,32 @@
 {
-  "name": "testserver",
-  "version": "1.1.1",
+  "name": "bonmot-examples",
+  "version": "1.2.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Donovan Walker",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/relativityboy/bonmot-examples/issues"
+  },
+  "homepage": "https://github.com/relativityboy/bonmot-examples#readme",
   "dependencies": {
-    "bonmot": "^0.3.2",
+    "dw-backbone":"^0.1.4",
+    "bonmot": "^0.3.4",
     "bootstrap": "^3.3.7",
     "express": "^4.14.0",
     "morgan": "^1.7.0",
     "require-css": "^0.1.8"
+  },
+  "devDependencies": {
+    "amdefine": "^1.0.0",
+    "gulp": "^3.9.1",
+    "gulp-change": "^1.0.0",
+    "gulp-jshint": "^2.0.1",
+    "gulp-rename": "^1.2.2",
+    "jshint": "^2.9.3",
+    "map-stream": "0.0.6"
   }
 }

@@ -1,0 +1,10 @@
+<!--Our first example is super-simple. Two way binding with three data attributes.-->
+<h1>{{example_number}} Two way data binding.</h1>
+<p>If you edit the input fields, you'll see the large font name update dynamically.</p>
+<p>Not a big deal, but the only 'magic' in the html (example1/person/person.hbs) are nicely formatted css classes,
+  <i>w-atr-displayName, w-atr-firstName, w-atr-lastName</i>.
+</p>
+<p>The View (example1/person/person.js) has exactly two lines of code.
+  <i>uiBindings:['firstName','lastName', 'displayName']</i> tells BonMot which model attributes to bind.
+  <i>hbs:tplPerson</i> says "use this template for my html".
+</p>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example 4 - BonMot</title>
+  <link href="/libs/bootstrap/css/bootstrap.css" media="screen" rel="stylesheet" type="text/css"/>
+  <link href="/css/style.css" media="screen" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+  <div class="container-fluid">
+    <!-- Create more nicely packaged styles with bon-mot's <strong>unique</strong> attribute. -->
+  <h1>Example 4.  A touch of color. </h1>
+  <h3>Modularizing CSS with the 'unique' attribute.</h3>
+  <p>
+    In this example we do something trivial, but really nice. We've added an attribute 'unique' to our View.
+    It's intended to be unique across all the View Types you'll load. What's really neat about this string is that it's
+    injected into the root element of your view as a css class (dots are transformed into dashes).
+  </p>
+  <p>
+    This helps you more easily create View specific css and know it'll be applied where it belongs.
+  </p>
+  <p><strong>In the code:</strong> There's a new css file in the person directory, and two more lines in our person.js file.
+    One to import the css, and another for the 'unique' attribute.<br/>
+    (you could just as easily include the css via direct link in your page)
+  </p>
+
+    <div class="row">
+      <div class="col-xs-12 col-lg-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">Example</div>
+          <div  id="example" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-lg-6">
+        <div id="modelJSON" class="panel panel-default json">
+          <div class="panel-heading">Person Model State. </div>
+          <div class="w-ctrl-refreshJSON panel-body" title="Click to refresh sub-models"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="/libs/requirejs/require.js"></script>
+  <script type="text/javascript" src="/libs/requireconfig.js"></script>
+  <script>
+    require(['app.js'], function(App) {
+      App.start();
+    })
+  </script>
+</body>
+</html>

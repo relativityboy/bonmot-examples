@@ -24,29 +24,6 @@ app.use('/libs/bootstrap/', express.static(__dirname + '/node_modules/bootstrap/
 app.use('/libs/bonmot/', express.static(__dirname + '/node_modules/bonmot/dist/'));
 app.use('/libs/require-css/', express.static(__dirname + '/node_modules/require-css/'));
 app.use('/', express.static(__dirname + '/public/'));
-/*app.get('/:name', function (req, res, next) {
-  console.log(req.params.name);
-  var options = {
-    root: __dirname + '/public/',
-    dotfiles: 'deny',
-    headers: {
-        'x-timestamp': Date.now(),
-        'x-sent': true
-    }
-  };
-
-  var fileName = req.params.name;
-  res.sendFile(fileName, options, function (err) {
-    if (err) {
-      console.log(err);
-      res.status(err.status).end();
-    }
-    else {
-      console.log('Sent:', fileName);
-    }
-  });
-
-});*/
 
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!');

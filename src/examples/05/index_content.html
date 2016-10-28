@@ -1,0 +1,32 @@
+<!-- Automagic Child-Views. Nested data. The basics. -->
+  <h1>{{example_number}} Automagic Child-Views</h1>
+  <h3>Create a simple child-view.</h3>
+  <p>
+    This is a fairly uncomplicated child-view. We've added an address below to the person. There's a corresponding
+    <strong>/address</strong> app directory with our example, with CSS, HTML, and Javascript files. Not much different
+    from what you saw in Example1.
+  </p>
+  <p>
+    This user interface doesn't 'do' anything new other than display the address view and model data. There's more
+    interactivity in the next example.
+  </p>
+  <p><strong>In the code:</strong>
+    Our Child-View magic happens in the Person app. You'll see two things.
+    <ol>
+      <li>In <strong>Person.Model</strong> we've added a <strong>_set.address</strong> function (courtesy of
+        <a href="https://github.com/relativityboy/dw-backbone">DW-Backbone</a> to make sure that any JSON being set
+        on 'address' gets turned into an Address.Model instance.</li>
+      <li>In <strong>Person.View</strong> we've added <strong>atrViews.address</strong> and said to use the
+        <strong>Address.View</strong> to create a view for the address on the Person.Model that our Person.View is
+        handling at any particular moment</li>
+    </ol>
+  </p>
+  <p>
+    <strong>In the console:</strong>
+    <ol>
+      <li>person.model._set.address</li>
+      <li>person.atrViews.address (used to create person.childViews.address)</li>
+      <li>person.childViews.address.hbs()</li>
+      <li>person.model.toJSON()</li>
+    </ol>
+  </p>
