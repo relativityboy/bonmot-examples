@@ -1,7 +1,8 @@
 {
   "name": "bonmot-examples",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "",
+  "private":true,
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,9 +13,13 @@
     "url": "https://github.com/relativityboy/bonmot-examples/issues"
   },
   "homepage": "https://github.com/relativityboy/bonmot-examples#readme",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:relativityboy/bonmot-examples.git"
+  },
   "dependencies": {
-    "dw-backbone":"^0.1.4",
-    "bonmot": "^0.3.4",
+    "dw-backbone":"^0.1.5",
+    "bonmot": "^0.3.5",
     "bootstrap": "^3.3.7",
     "express": "^4.14.0",
     "morgan": "^1.7.0",
