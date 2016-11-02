@@ -38,8 +38,15 @@ and to have port 3000 available. To use, do the following:
 1. *with more to come....*
 
 ##Ask Questions!
-BonMot may be born of much experience, but it's also very new!
+BonMot is born of much experience, but it's also very new!
 
 We're very interested in your feedback. If you want to know how
 to do something in BonMot, chances are other people do, too. We may be able to write up 
 an example for you and everyone else. Don't hesitate to ask.
+
+
+Important!!!!!
+
+The atr renderer needs to have it's hbs template compiled at extension time!
+Then it gets created and setup by the newChildView on the main View declaration
+Need to look into setup and teardown again. The render *always* happens on instantiation!

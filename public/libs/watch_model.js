@@ -22,7 +22,7 @@ define(['bon-mot'], function(BonMot) {
         if(this.model.get('address')) {
           this.model.get('address').off(null, null, this);
         }
-        if(this.model.get('addressList')) {
+        if(this.model.get('addressList')  && this.model.get('addressList') instanceof BonMot.Collection) {
           this.model.get('addressList').off(null, null, this);
         }
       }
@@ -31,7 +31,7 @@ define(['bon-mot'], function(BonMot) {
       if(this.model.get('address')) {
         this.model.get('address').on('change', this.ctrlRefreshJSON, this);
       };
-      if(this.model.get('addressList')) {
+      if(this.model.get('addressList') && this.model.get('addressList') instanceof BonMot.Collection) {
         this.model.get('addressList').on('change', this.ctrlRefreshJSON, this);
       };
     },

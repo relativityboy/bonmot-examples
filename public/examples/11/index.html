@@ -2,17 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Example 10 - BonMot</title>
+  <title>Example 11 - BonMot</title>
   <link href="/libs/bootstrap/css/bootstrap.css" media="screen" rel="stylesheet" type="text/css"/>
   <link href="/css/style.css" media="screen" rel="stylesheet" type="text/css"/>
 </head>
 <body>
   <div class="container-fluid">
-    <!-- Sorting Collections of Models with Child-Views. -->
-  <h1>Example 10.  Collections of Models with Child-Views.</h1>
-  <h3>Sorting, Adding, and Removing items from lists.</h3>
-  <p>In this example we move from a simple html list to a table that sorts when you click a column header. See
-    <strong>Person.View.ctrlSortBy</strong>. Clicking on a row in the table will set that model on the Address Detail view.
+    <!-- Low cost, complex, live attributes -->
+  <h1>Example 11.  Low maintenance complex attributes</h1>
+  <h3>Creating 'live' html for an attribute without a view. For attributes that need that extra *kick*.</h3>
+  <p>This example changes the person.model.addressList yet again. In our previous example it was a Collection of Address Models,
+    each with their own view. Here, .addressList is a simple array with JSON describing each address.
+    There is an hbs template included in the Persion.View definition at atrViews.addressList. It's used to render the
+    address list on change.
+  </p>
+  <p>
+    Any attribute can be given an hbs template in this way. If the attribute is an array, the hbs template will be applied
+    to each item in the array. Anything with a toJSON function will have that function called, and the results used on
+    the template.
+  </p>
+  <p>
+    Again the attribute is rendered <i>in its entirety</i> on change. While convenient, and having lower overhead than
+    a view, this rendering method is not suitable for input elements that contain user entered data or state.
   </p>
   <p>We have <strong>Person.View.ctrlNewAddress</strong> and <strong>Person.View.ctrlDeleteAddress</strong> for
     creating and deleting models.<br>
