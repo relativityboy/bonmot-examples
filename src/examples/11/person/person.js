@@ -14,7 +14,7 @@ define([
     Address
   ) {
     var _export = {};
-
+    var i = 3000;
     _export.Model = BonMot.Model.extend({
       _set:{
         editingAddress:Address.Model
@@ -30,8 +30,10 @@ define([
         editingAddress:Address.DetailView,
         addressList:tplAddressItem
       },
+
       ctrlNewAddress:function() {
-        this.model.set('editingAddress', {id:this.model.get('addressList').length});
+        i++;
+        this.model.set('editingAddress', {id:i});
         this.$ctrl.saveAddress.removeAttr('disabled');
       },
       ctrlSaveAddress:function(evt) {
