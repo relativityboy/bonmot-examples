@@ -1,5 +1,6 @@
 define([
     'jquery',
+    'underscore',
     'hbs!./person',
     'hbs!./address_item',
     'bon-mot',
@@ -8,11 +9,13 @@ define([
   ],
   function(
     $,
+    _,
     tplPerson,
     tplAddressItem,
     BonMot,
     Address
   ) {
+
     var _export = {};
     var i = 3000;
     _export.Model = BonMot.Model.extend({
@@ -40,7 +43,15 @@ define([
         var addressList = _.clone(this.model.get('addressList'));
 
         addressList.push(this.model.get('editingAddress').toJSON());
+        this.model.unset('editingAddress');
+        this.$ctrl.saveAddress.attr('disabled', 'disabled');
         this.model.set('addressList', addressList);
+      },
+      ctrlSortBy:function(evt) {
+        var addressList = this.model.get('addressList'),
+          sortAtr = $(evt.currentTarget).data('sort-by');
+
+        this.model.set('addressList', _.sortBy(addressList, sortAtr));
       },
       ctrlViewDetail:function(evt) {
         var id = $(evt.currentTarget).data('id');

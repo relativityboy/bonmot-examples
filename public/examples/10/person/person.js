@@ -36,7 +36,8 @@ define([
         this.model.get('addressList').add(this.model.get('editingAddress'));
       },
       ctrlDeleteAddress:function() {
-        this.model.get('editingAddress').dispose();
+        if(this.model.get('editingAddress'))
+          this.model.get('editingAddress').dispose();
 
       },
       ctrlSortBy:function(evt) {
