@@ -6,3 +6,7 @@
 body {
     background:oldlace;
 }
+
+.btn.disabled, .btn[disabled] {
+    background:grey;
+}
