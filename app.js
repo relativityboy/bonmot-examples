@@ -9,9 +9,9 @@ var app = express();
 
 
 app.get('/', function (req, res) {
-  res.send('Hello World!');
+  res.sendFile(__dirname + '/public/index.html');
 });
-
+/*
 app.use('/libs/jquery/', express.static(__dirname + '/node_modules/jquery/dist/'));
 app.use('/libs/handlebars/', express.static(__dirname + '/node_modules/handlebars/dist/'));
 app.use('/libs/requirejs/', express.static(__dirname + '/node_modules/requirejs/'));
@@ -22,7 +22,7 @@ app.use('/libs/dw-backbone/', express.static(__dirname + '/node_modules/dw-backb
 app.use('/libs/stickit/', express.static(__dirname + '/node_modules/backbone.stickit/'));
 app.use('/libs/bootstrap/', express.static(__dirname + '/node_modules/bootstrap/dist/'));
 app.use('/libs/bonmot/', express.static(__dirname + '/node_modules/bonmot/dist/'));
-app.use('/libs/require-css/', express.static(__dirname + '/node_modules/require-css/'));
+app.use('/libs/require-css/', express.static(__dirname + '/node_modules/require-css/'));*/
 app.use('/', express.static(__dirname + '/public/'));
 
 app.listen(3000, function () {

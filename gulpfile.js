@@ -49,6 +49,31 @@ gulp.task('example-subfolders', function() {
 });
 
 
+gulp.task('lib-app-js', function() {
+  gulp.src('./node_modules/jquery/dist/jquery.js')
+    .pipe(gulp.dest("./public/libs/jquery/"));
+  gulp.src('./node_modules/handlebars/dist/handlebars.amd.js')
+    .pipe(gulp.dest("./public/libs/handlebars/"));
+  gulp.src('./node_modules/requirejs/require.js')
+    .pipe(gulp.dest("./public/libs/requirejs/"));
+  gulp.src('./node_modules/requirejs-text/text.js')
+    .pipe(gulp.dest("./public/libs/requirejs-text/"));
+  gulp.src('./node_modules/underscore/underscore-min.js')
+    .pipe(gulp.dest("./public/libs/underscore/"));
+  gulp.src('./node_modules/backbone/backbone.js')
+    .pipe(gulp.dest("./public/libs/backbone/"));
+  gulp.src('./node_modules/dw-backbone/src/base.js')
+    .pipe(gulp.dest("./public/libs/dw-backbone/"));
+  gulp.src('./node_modules/backbone.stickit/backbone.stickit.js')
+    .pipe(gulp.dest("./public/libs/stickit/"));
+  gulp.src('./node_modules/bootstrap/dist/css/**.*')
+    .pipe(gulp.dest("./public/libs/bootstrap/css/"));
+  gulp.src('./node_modules/bonmot/dist/**/*.js')
+    .pipe(gulp.dest("./public/libs/bonmot/"));
+  return gulp.src('./node_modules/require-css/**.js')
+    .pipe(gulp.dest("./public/libs/require-css/"));
+});
+
 gulp.task('example-app-js', function() {
   var exampleAppHBS =  Handlebars.compile(fs.readFileSync('./src/example_template/app.hbs.js', 'utf8'));
   return gulp.src('src/examples/*/app_person_data.json')
@@ -119,4 +144,4 @@ gulp.task('watch', ['default'], function() {
 
 // Default Task
 //gulp.task('default', ['lint', 'sass', 'scripts', 'watch']);
-gulp.task('default', ['css', 'js', 'example-subfolders','index-html']);
+gulp.task('default', ['css', 'lib-app-js', 'js', 'example-subfolders','index-html']);

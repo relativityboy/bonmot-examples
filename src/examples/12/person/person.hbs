@@ -1,0 +1,53 @@
+<div class="container-fluid">
+  <div class="row title-row">
+    <div class="col-xs-12">
+      <h3>Addresses for: <span class="w-atr-firstName"></span> <span class="w-atr-lastName"></span></h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-5">
+      <h4>All Addresses</h4>
+    </div>
+    <div class="col-xs-7">
+      <h4>Address Detail
+        <button class="w-ctrl-deleteAddress btn btn-xs btn-danger pull-right">Delete</button>
+        <button class="w-ctrl-newAddress btn btn-xs btn-success pull-right">New</button>
+      </h4>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-5">
+      <table class="w-atr-addressList table table-striped address-list">
+        <thead>
+        <tr>
+          <td align="right" colspan="99">
+            Len:<input class="w-atr-pageLength" style="width:30px;">
+            <button class="w-ctrl-first">&lt;&lt;</button>
+            <button class="w-ctrl-prev">&lt;</button>
+            <input class="w-atr-page" style="width:30px;">
+            <button class="w-ctrl-next">&gt;</button>
+            <button class="w-ctrl-last">&gt;&gt;</button>
+          </td>
+        </tr>
+        <tr>
+          <td align="right" colspan="99">
+            Search:<input class="w-ctrl-search" data-search-by="name">
+          </td>
+        </tr>
+        <tr>
+          <th class="w-ctrl-sortBy sort" data-sort-by="name">Name</th>
+          <th class="w-ctrl-sortBy sort" data-sort-by="street">Street</th>
+          <th class="w-ctrl-sortBy sort" data-sort-by="city">City</th>
+          <th ></th>
+        </tr>
+        </thead>
+        <tbody class="w-collection" data-page-length="4"></tbody>
+      </table>
+
+    </div>
+    <div class="col-xs-7">
+      <div class="w-atr-editingAddress"></div>
+    </div>
+  </div>
+</div>

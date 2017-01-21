@@ -7,7 +7,7 @@ require.config({
     'stickit':'/libs/stickit/backbone.stickit',
     'underscore':'/libs/underscore/underscore-min',
     'backbone':'/libs/backbone/backbone',
-    'dw-backbone':'/libs/dw-backbone/src/base',
+    'dw-backbone':'/libs/dw-backbone/base',
     'bon-mot':'/libs/bonmot/bonmot'
   },
   shim: {
