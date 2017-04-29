@@ -1,0 +1,12 @@
+.json .panel-body {
+    white-space:pre;
+    cursor:pointer;
+}
+
+body {
+    background:oldlace;
+}
+
+.btn.disabled, .btn[disabled] {
+    background:grey;
+}
