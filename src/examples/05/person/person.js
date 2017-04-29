@@ -40,7 +40,7 @@ define([
     B = Backbone.Model;
     _export.View = BonMot.View.extend({
       Model:_export.Model,
-      hbs:tplPerson,
+      tpl:tplPerson,
       unique:'person-app',
       uiBindings:['firstName','lastName'],
       bindings:{

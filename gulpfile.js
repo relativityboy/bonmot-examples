@@ -70,6 +70,7 @@ gulp.task('lib-app-js', function() {
     .pipe(gulp.dest("./public/libs/bootstrap/css/"));
   gulp.src('./node_modules/bonmot/dist/**/*.js')
     .pipe(gulp.dest("./public/libs/bonmot/"));
+
   return gulp.src('./node_modules/require-css/**.js')
     .pipe(gulp.dest("./public/libs/require-css/"));
 });
@@ -125,7 +126,7 @@ gulp.task('index-html', ['example-index-html'], function() {
 });
 
 gulp.task('js', ['example-app-js'], function() {
-  gulp.src('src/libs/**.js')
+  gulp.src('src/libs/**/*.js')
     .pipe(gulp.dest("./public/libs"));
 
   return gulp.src('src/examples/*/**.js')

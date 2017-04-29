@@ -19,7 +19,7 @@ define([
 
     _export.DetailView = BonMot.View.extend({
       Model:_export.Model,
-      hbs:tplAddressDetail,
+      tpl:tplAddressDetail,
       unique:'address-detail-view',
       uiBindings:['name', 'street','city','state','country'],
       initialize:function() {
@@ -40,8 +40,7 @@ define([
     _export.ItemView = BonMot.View.extend({
       needsModel:true,
       Model:_export.Model,
-      hbsData:true,
-      hbs:tplAddressItem,
+      tpl:tplAddressItem,
       uiBindings:['name', 'street', 'city'],
       /**
        * Notice the absence of the .ctrlViewDetail function.

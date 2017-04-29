@@ -24,7 +24,7 @@ define([
 
     _export.View = BonMot.View.extend({
       Model:_export.Model,
-      hbs:tplPerson,
+      tpl:tplPerson,
       unique:'person-view',
       uiBindings:['firstName','lastName'],
       atrViews:{
@@ -38,7 +38,6 @@ define([
       ctrlDeleteAddress:function() {
         if(this.model.get('editingAddress'))
           this.model.get('editingAddress').dispose();
-
       },
       ctrlSortBy:function(evt) {
         var addressList = this.model.get('addressList'),

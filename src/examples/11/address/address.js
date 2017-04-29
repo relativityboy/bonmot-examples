@@ -1,12 +1,10 @@
 define([
     'hbs!./address_detail',
-    'hbs!./address_item',
     'bon-mot',
     'css!./address'
   ],
   function(
     tplAddressDetail,
-    tplAddressItem,
     BonMot
   ) {
     var _export = {};
@@ -19,7 +17,7 @@ define([
 
     _export.DetailView = BonMot.View.extend({
       Model:_export.Model,
-      hbs:tplAddressDetail,
+      tpl:tplAddressDetail,
       unique:'address-detail-view',
       uiBindings:['name', 'street','city','state','country'],
       initialize:function() {

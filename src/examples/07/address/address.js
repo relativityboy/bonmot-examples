@@ -17,7 +17,7 @@ define([
 
     _export.View = BonMot.View.extend({
       Model:_export.Model,
-      hbs:tplAddress,
+      tpl:tplAddress,
       unique:'address-app',
       uiBindings:['name', 'street','city','state','country'],
     });

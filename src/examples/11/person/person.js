@@ -26,23 +26,33 @@ define([
 
     _export.View = BonMot.View.extend({
       Model:_export.Model,
-      hbs:tplPerson,
+      tpl:tplPerson,
       unique:'person-view',
       uiBindings:['firstName','lastName'],
       atrViews:{
         editingAddress:Address.DetailView,
-        addressList:tplAddressItem
+        addressList:tplAddressItem //this is an HBS template, but it could also be a simple string, or a function returning a string.
       },
 
       ctrlNewAddress:function() {
-        i++;
+        i++; //I cheat. It starts @ 3000!
         this.model.set('editingAddress', {id:i});
         this.$ctrl.saveAddress.removeAttr('disabled');
       },
+      //save is a bit more complex since we're not using a Collection here.
       ctrlSaveAddress:function(evt) {
-        var addressList = _.clone(this.model.get('addressList'));
+        var editingAddress = this.model.get('editingAddress').toJSON(),
+          addressList = _.clone(this.model.get('addressList'));
+        _.each(addressList, function(address, j) {
+            if(address.id == editingAddress.id) {
+              addressList[j] = editingAddress;
+              editingAddress = false;
+            }
+        });
+        if(editingAddress) {
+          addressList.push(editingAddress);
+        }
 
-        addressList.push(this.model.get('editingAddress').toJSON());
         this.model.unset('editingAddress');
         this.$ctrl.saveAddress.attr('disabled', 'disabled');
         this.model.set('addressList', addressList);
@@ -58,7 +68,7 @@ define([
         _.each(this.model.get('addressList'),function(address) {
           if(address.id == id) {
             this.model.set('editingAddress', address);
-            this.$ctrl.saveAddress.attr('disabled', 'disabled');
+            this.$ctrl.saveAddress.removeAttr('disabled');
           }
         }, this);
       }

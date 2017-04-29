@@ -7,7 +7,6 @@ define([
     BonMot
   ) {
     var _export = {};
-
     /**
      * This model is just simple model with a little attribute update function to make our examples more interesting
      */
@@ -29,9 +28,9 @@ define([
       Model:_export.Model,
 
       /**
-       * This handlebars template will be automatically rendered when the view is instantiated
+       * This template will be automatically rendered when the view is instantiated
        */
-      hbs:tplPerson,
+      tpl:tplPerson,
 
       /**
        * These model attributes will be respectively bound to .w-atr-firstName , .w-atr-lastName , .w-atr-displayName

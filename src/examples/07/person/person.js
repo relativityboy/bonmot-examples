@@ -29,7 +29,7 @@ define([
 
     _export.View = BonMot.View.extend({
       Model:_export.Model,
-      hbs:tplPerson,
+      tpl:tplPerson,
       unique:'person-app',
       uiBindings:[
         'name',
@@ -61,7 +61,7 @@ define([
     });
 
     _export.ViewFixed = _export.View.extend({
-      hbs:tplPersonFixed,
+      tpl:tplPersonFixed,
       unique:'person-fixed',
       classSuffix:'person'
     });

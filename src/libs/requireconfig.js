@@ -24,7 +24,7 @@ require.config({
   packages: [{
     // Include hbs as a package, so it will find hbs-builder when needed
     name: "hbs",
-    location: "/libs/bonmot/libs",
+    location: "/libs/hbs-builder",
     main: "hbs"
   }],
   hbs: {

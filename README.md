@@ -13,7 +13,7 @@ Don't worry. It's easy.
 To take advantage of these tutorials you'll need Node.js on your computer, 
 and to have port 3000 available. To use, do the following:
 
-1. Install Node 6.2.1 or greater, with NPM 3.9.3 or greater
+1. Install Node 6.2.1 or greater
 1. Clone/download this project
 1. Open a shell and cd into the project root directory 
 1. Run the command *npm install*
@@ -26,15 +26,19 @@ and to have port 3000 available. To use, do the following:
 
 1. Two way data binding basics
 1. Control binding basics
-1. Custom Data Binding
+1. Reduce code complexity by leveraging BonMot's native binder.
 1. Modularized CSS with *.unique*
 1. Automagic Child-Views. Nested data. The basics.
-1. Child-Views - Changing Models
-1. Handling nested properties with the same name.
-1. Child-Views from Collections. (ctrl binding v1)
-1. Child-Views from Collections. (ctrl binding v2)
-1. Creating, Deleting & Reordering Child-Views automatically
-1. Advanced controls - different events (mouse over, etc)*
+1. Child-Views - Swapping Models on the fly
+1. Child-Views - Handling nested Models with the same properties.
+1. Child-View Collections 1 - Automagic Lists of Views & Models.
+1. Child-View Collections 2 - A slightly different approach to a control handler.
+1. Child-View Collections 3 - Creating, Deleting & Sorting Child-Views automatically
+1. Low cost, complex, live attributes
+1. Collections - Built in pagination
+1. \*Advanced controls - different events (mouse over, etc)
+1. \*GoodBye explicit render - Wiring up clean html
+1. \*HTML - How you want it. HBS, Strings, custom functions
 1. *with more to come....*
 
 ##Ask Questions!
