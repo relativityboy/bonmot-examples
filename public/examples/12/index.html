@@ -9,26 +9,32 @@
 <body>
   <div class="container-fluid">
     <!--Templating 1 - Skipping Child Views for display-only UI - Low cost, complex, live attributes -->
-  <h1>Example 12.  Low maintenance complex attributes</h1>
-  <h3>Creating 'live' html for an attribute without a view. For attributes that need that extra *kick*.</h3>
+  <h1>Example 12.  Skipping Child Views for display-only UI</h1>
+  <i>aka:Template Only Views</i>
+  <h3>Creating 'live' html for an attribute without a View. For attributes that need that extra visual *kick*.</h3>
   <p>This example changes the person.model.addressList yet again. In our previous example it was a Collection of Address Models,
-    each with their own View. Here, .addressList is a simple array with JSON describing each address.
-    There is an hbs template included in the Persion.View definition at atrViews.addressList. It's used to render the
+    each with their own View. Here, .addressList is a simple array of Objects describing each address.<br>
+    There is an hbs template included in the Person.View definition at atrViews.addressList. It's used to render the
     address list on change.
   </p>
   <p>
     Any attribute can be given an template in this way. If the attribute is an array, the template will be applied
-    to each item in the array, and the concatinated result put in the corresponding dom element.
+    to each item in the array, and the concatenated result put in the corresponding dom element.
     Any attribute with a toJSON function will have that function called, and the results passed to the template.
   </p>
-  <p><i><strong>Important note about templates:</strong> BonMot is not explicit about which templating engine you use.
-  you can use handlebars, jsx, a plain string, define your own functions, or have BonMot compile the templates
-    automatically (by setting the .templateCompiler property in your View declaration ex -
-    templateCompiler:Handlebars.compile )
-  </i></p>
-  <p>
-    Again the attribute is rendered <i>in its entirety</i> on change. While convenient, and having lower overhead than
-    a view, this rendering method is not suitable for input elements that contain user entered data or state.
+  <p><i><strong>Important notes about templates:</strong></i>
+    <ul>
+      <li>BonMot is not explicit about which templating engine you use. You can use handlebars, jsx, a plain string,
+        define your own functions, or have BonMot compile the templates automatically (by setting the .templateCompiler
+        property in your View declaration ex - templateCompiler:Handlebars.compile )</li>
+      <li>Since we're outputting plain templates, you <b>must</b> use a 3rd party templating engine. Attribute bindings
+      will have no effect.
+      </li>
+      <li>
+        The attribute is rendered <i>in its entirety</i> on change. While convenient, and having lower overhead than
+        a view, this rendering method is not suitable for input elements that contain user entered data or state.
+      </li>
+    </ul>
   </p>
   <p>We have <strong>Person.View.ctrlNewAddress</strong> and <strong>Person.View.ctrlDeleteAddress</strong> for
     creating and deleting models.
